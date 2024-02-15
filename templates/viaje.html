@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaje</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/viaje.css') }}">
+</head>
+<body>
+    <h1>¿Hacía donde te diriges {{nombre}}?</h1>
+    <form action="/procesar_viaje" method="POST">
+        <p>Origen del trayecto:</p>
+        <input type="text" name="origen" placeholder="Ingrese el lugar de origen">
+        <br>
+        <p>Destino del trayecto:</p>
+        <input type="text" name="destino" placeholder="Ingrese el lugar de destino">
+        <br>
+        <br>
+        <button type="submit">Buscar Servicio</button>
+    </form>
+</body>
+</html>

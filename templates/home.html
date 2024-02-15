@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Wheels</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <h1>Urban Wheels</h1>
+    <form action="/procesar_formulario" method="POST">
+        <p>Ingrese su nombre:</p>
+        <input type="text" name="nombre" placeholder="Escriba su nombre aquí:">
+        <button type="submit">Guardar y continuar</button>
+    </form>
+</body>
+</html>

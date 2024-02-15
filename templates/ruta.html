@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ruta.css') }}">
+</head>
+<body>
+    <h1>Ruta desde {{ origen }} hasta {{ destino }}</h1>
+    <p>Distancia total: {{ distancia }}</p>
+    <p>Tiempo estimado: {{ duracion_viaje }}</p>
+    <p>Precio estimado: ${{ precio }}</p>
+
+    <img src="{{ url_mapa }}" alt="Mapa del viaje">
+
+    <form action="/proceso_conductor" method="post" target="_blank">
+        <button type="submit">Buscar servicio</button>
+    </form>
+
+</body>
+</html>

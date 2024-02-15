@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conductor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/conductor.css') }}">
+</head>
+<body>
+    <h1>Nuevo servicio pedido de {{ nombre }}</h1>
+    <h2>{{ origen }} hasta {{ destino }}</h2>
+    <p>Distancia total: {{ distancia }} Km</p>
+    <p>Tiempo estimado: {{ duracion_viaje }}</p>
+    <p>Precio estimado: ${{ precio }}</p>
+
+    <img src="{{ url_mapa }}" alt="Mapa del viaje">
+
+    <form action="/aceptar_conductor" method="get">
+        <button type="submit">Aceptar Viaje</button>
+    </form>
+
+    <form action="/rechazo_conductor" method="POST">
+        <input type="submit" name="rechazar" value="Rechazar Viaje">
+    </form>
+</body>
+</html>
