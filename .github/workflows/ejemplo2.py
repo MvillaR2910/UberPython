@@ -1,0 +1,1 @@
+print("Vamos a ganar estadistica")
